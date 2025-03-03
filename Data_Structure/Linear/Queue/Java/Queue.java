@@ -2,7 +2,7 @@ public class Queue<T> {
     private Node<T> front;
     private Node<T> back;
     private int count;
-    
+
     public Queue() {
         front = null;
         back = null;
@@ -28,9 +28,14 @@ public class Queue<T> {
 
     public void pop() {
         if (!isEmpty()) {
-            Node<T> last = front;
-            front = front.next();
-            last = null;
+            if (front == back) {
+                back = null;
+                front = null;
+            } else {
+                Node<T> last = front;
+                front = front.next();
+                last = null;
+            }
             count--;
         }
     }

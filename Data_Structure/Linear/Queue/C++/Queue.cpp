@@ -42,7 +42,15 @@ public:
         if (!isEmpty())
         {
             node *last = front;
-            front = front->next;
+            if (front == back)
+            {
+                front = NULL;
+                back = NULL;
+            }
+            else
+            {
+                front = front->next;
+            }
             delete last;
             count--;
         }
@@ -101,11 +109,14 @@ public:
             front = back = NULL;
         }
     }
-    int find(T val){
+    int find(T val)
+    {
         node *start = front;
         int index = 0;
-        while(start != NULL){
-            if(start->val == val){
+        while (start != NULL)
+        {
+            if (start->val == val)
+            {
                 return index;
             }
             start = start->next;
@@ -154,6 +165,17 @@ int main()
 
     q.pop();
 
-    
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    q.print();
+    q.pop();
+    q.pop();
+    q.pop();
+    cout << "-----------------------------------\n";
+    q.push(1);
+    q.push(2);
+    q.print();
+
     return 0;
 }

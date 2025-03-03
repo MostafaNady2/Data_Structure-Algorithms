@@ -22,6 +22,18 @@ public class Main {
         q.clear();
         System.out.println("Is empty: " + q.isEmpty());
         System.out.println("Size: " + q.size());
+
+        System.out.println("----------------------------------");
+        q.push(1);
+        q.push(2);
+        q.push(3);
+        q.pop();
+        q.pop();
+        q.pop();
+        q.print();
+        q.push(1);
+        q.push(2);
+        q.print();
     }
     
 }
