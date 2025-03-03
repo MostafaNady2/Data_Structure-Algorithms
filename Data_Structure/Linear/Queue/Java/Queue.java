@@ -75,6 +75,17 @@ public class Queue<T> {
         count = 0;
     }
 
-   
+    public int find(T val) {
+        Node<T> start = front;
+        int index = 0;
+        while (start != null) {
+            if (start.getVal().equals(val)) {
+                return index;
+            }
+            start = start.next();
+            index++;
+        }
+        return -1;
+    }
 
 }

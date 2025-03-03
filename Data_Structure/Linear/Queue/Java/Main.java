@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Front: " + q.getFront());
         System.out.println("Back: " + q.getBack());
         System.out.println("Size: " + q.size());
-
+        System.out.println("Find 3 : " + q.find(3));
         q.pop();
         System.out.println("--------------------------------");
         q.print();

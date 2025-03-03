@@ -101,6 +101,18 @@ public:
             front = back = NULL;
         }
     }
+    int find(T val){
+        node *start = front;
+        int index = 0;
+        while(start != NULL){
+            if(start->val == val){
+                return index;
+            }
+            start = start->next;
+            index++;
+        }
+        return -1;
+    }
     ~Queue()
     {
         while (!isEmpty())
@@ -124,7 +136,8 @@ int main()
     cout << "Front : " << q.getfront() << endl;
     cout << "Back : " << q.getback() << endl;
     cout << "Size : " << q.size() << endl;
-
+    cout << "--------------------------------------\n";
+    cout << "Find 3 : " << q.find(3) << endl;
     q.pop();
     cout << "-----------------------------------\n";
     q.print();
