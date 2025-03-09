@@ -62,5 +62,16 @@ public class Main {
 
         list.clear();
         System.out.println("After clear, isEmpty: " + (list.isEmpty() ? "true" : "false"));
+        System.out.println("-----------------------------------------");
+        list.pushBack(1);
+        list.pushBack(2);
+        list.pushBack(3);
+        list.pushBack(4);
+        list.pushBack(5);
+        list.print();
+        System.out.println("After Reverse : ");
+        list.reverse();
+        list.print();
+
     }
 }

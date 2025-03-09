@@ -188,6 +188,21 @@ public class LinkedList<T extends Comparable<T>> {
         count--;
     }
 
+    public void reverse() {
+        Node<T> curr = head;
+        Node<T> next = curr.next;
+        Node<T> prev = null;
+        Node<T> newTail = head;
+        while (next != null) {
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+            next = next.next;
+        }
+        curr.next = prev;
+        head = curr;
+        tail = newTail;
+    }
     public void clear() {
         // Thanks to Garbage Collector 
         head = null;

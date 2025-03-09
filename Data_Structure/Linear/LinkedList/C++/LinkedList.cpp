@@ -134,17 +134,20 @@ public:
         }
         count--;
     }
-    void pop_front(){
-        if(count == 0){
+    void pop_front()
+    {
+        if (count == 0)
+        {
             return;
         }
-        if(count == 1){
+        if (count == 1)
+        {
             head = tail = nullptr;
             count = 0;
             return;
         }
         Node *del = head;
-        head=head->next;
+        head = head->next;
         del->next = nullptr;
         delete del;
         count--;
@@ -160,19 +163,23 @@ public:
         }
         cout << "]\n";
     }
-    void insertAt(int index,T val){
-        if(index < 0 || index >= count){
+    void insertAt(int index, T val)
+    {
+        if (index < 0 || index >= count)
+        {
             return;
         }
-        if(index == 0){
+        if (index == 0)
+        {
             push_front(val);
             return;
         }
-        if(index == count){
+        if (index == count)
+        {
             push_back(val);
             return;
         }
-        Node* start = head;
+        Node *start = head;
         index--;
         while (index--)
         {
@@ -184,21 +191,26 @@ public:
         start->next = newVal;
         count++;
     }
-    void deleteAt(int index){
-        if(index < 0 || index >= count){
+    void deleteAt(int index)
+    {
+        if (index < 0 || index >= count)
+        {
             return;
         }
-        if(index == 0){
+        if (index == 0)
+        {
             pop_front();
             return;
         }
-        if(index == count-1){
+        if (index == count - 1)
+        {
             pop_back();
             return;
         }
         index--;
-        Node* start = head;
-        while(index--){
+        Node *start = head;
+        while (index--)
+        {
             start = start->next;
         }
         Node *del = start->next;
@@ -206,7 +218,8 @@ public:
         delete del;
         count--;
     }
-    void clear(){
+    void clear()
+    {
         Node *start = head;
         Node *temp;
         while (start != nullptr)
@@ -217,6 +230,26 @@ public:
         }
         count = 0;
         head = tail = nullptr;
+    }
+    void reverse()
+    {
+        if (count > 1)
+        {
+            Node *curr = head;
+            Node* next = curr->next;
+            Node *prev = nullptr;
+            Node *newTail = curr;
+            while (next != nullptr)
+            {
+                curr->next = prev;
+                prev = curr;
+                curr = next;
+                next=next->next;
+            }
+            curr->next = prev;
+            head = curr;
+            tail = newTail;
+        }
     }
     ~LinkedList()
     {
@@ -288,6 +321,16 @@ int main()
     list.clear();
     cout << "After clear, isEmpty: " << (list.isEmpty() ? "true" : "false") << endl;
 
+    cout << "-----------------------------------------\n";
+    list.push_back(1);
+    list.push_back(2);
+    list.push_back(3);
+    list.push_back(4);
+    list.push_back(5);
+    list.print();
+    cout << "After Reverse : \n";
+    list.reverse();
+    list.print();
+
     return 0;
 }
-
