@@ -22,10 +22,10 @@ This repository contains my implementations of various **Data Structures and Alg
 ## 📁 **Directory Structure**
 ```bash
 data_structure&algorithms/
-├── .vscode/                # VS Code settings
-├── Algorithms/             # Folder for algorithm implementations
-├── Data_Structure/         # Folder for data structure implementations
-│   ├── Linear/             # Linear data structures
+├── .vscode/                
+├── Algorithms/             
+├── Data_Structure/         
+│   ├── Linear/             
 │   │   ├── ArrayList/
 │   │   │   ├── C++/
 │   │   │   ├── Java/
@@ -38,8 +38,8 @@ data_structure&algorithms/
 │   │   ├── Stack/
 │   │   │   ├── C++/
 │   │   │   ├── Java/
-│   ├── Non_Linear/         # Non-linear data structures (to be added)
-├── README.md               # Project documentation
+│   ├── Non_Linear/         
+├── README.md               
 ```
 
 ## **Setup Instructions**
