@@ -1,16 +1,15 @@
-# Data Structure & Algorithms
+## Data Structure & Algorithms
 
 This repository contains my implementations of various **Data Structures and Algorithms** in **C++** and **Java**. It serves as a learning resource and practice space for mastering DSA concepts.
 
-##  **Contents**
+## **Contents**
 - **Data Structures**
-  - Arrays
-  - Linked Lists
-  - Stacks
-  - Queues
-  - Hash Tables
-  - Trees
-  - Graphs
+  - **Linear Data Structures**
+    - ArrayList
+    - Linked List
+    - Queue
+    - Stack
+  - **Non-Linear Data Structures** (Coming Soon)
 
 - **Algorithms**
   - Sorting Algorithms (Bubble Sort, Quick Sort, Merge Sort, etc.)
@@ -21,21 +20,26 @@ This repository contains my implementations of various **Data Structures and Alg
   - Recursion & Backtracking
 
 ## 📁 **Directory Structure**
-```
-cpp_projects/data_structure&algorithms/
-├── C++
-│   ├── stack.cpp
-│   ├── queue.cpp
-│   ├── sorting_algorithms.cpp
-│   ├── ... (more implementations)
-│
-├── Java
-│   ├── Stack.java
-│   ├── Queue.java
-│   ├── SortingAlgorithms.java
-│   ├── ... (more implementations)
-│
-└── README.md
+```bash
+data_structure&algorithms/
+├── .vscode/                
+├── Algorithms/             
+├── Data_Structure/         
+│   ├── Linear/             
+│   │   ├── ArrayList/
+│   │   │   ├── C++/
+│   │   │   ├── Java/
+│   │   ├── LinkedList/
+│   │   │   ├── C++/
+│   │   │   ├── Java/
+│   │   ├── Queue/
+│   │   │   ├── C++/
+│   │   │   ├── Java/
+│   │   ├── Stack/
+│   │   │   ├── C++/
+│   │   │   ├── Java/
+│   ├── Non_Linear/         
+├── README.md               
 ```
 
 ## **Setup Instructions**
@@ -69,8 +73,7 @@ cpp_projects/data_structure&algorithms/
 4. Commit and push your changes
 5. Create a pull request
 
-
-##  **Goals**
+## **Goals**
 - Implement standard data structures and algorithms
 - Optimize code for performance
 - Strengthen problem-solving skills
