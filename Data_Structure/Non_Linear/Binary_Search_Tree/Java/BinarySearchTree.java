@@ -43,7 +43,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		printTree(node.right);
 	}
 
-	public Node<T> remove(Node<T> base, T val) {
+	private Node<T> remove(Node<T> base, T val) {
 		if (base == null) {
 			return null;
 		}
